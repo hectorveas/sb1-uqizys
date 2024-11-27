@@ -5,7 +5,7 @@ import Features from './components/Features';
 import Workflow from './components/Workflow';
 import Pricing from './components/Pricing';
 import Footer from './components/Footer';
-
+import Workwithus from './components/Workwithus';
 function App() {
   return (
     <div className="min-h-screen bg-white">
@@ -14,6 +14,7 @@ function App() {
         <Hero />
         <Features />
         <Workflow />
+        <Workwithus />
         <Pricing />
       </main>
       <Footer />
