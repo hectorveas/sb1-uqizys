@@ -1,14 +1,14 @@
 const links = [
-    { name: 'Open roles', href: '#' },
-    { name: 'Internship program', href: '#' },
-    { name: 'Our values', href: '#' },
-    { name: 'Meet our leadership', href: '#' },
+    { name: 'Puestos abiertos', href: '#' },
+    { name: 'Programa de prácticas', href: '#' },
+    { name: 'Nuestros valores', href: '#' },
+    { name: 'Conoce a nuestro liderazgo', href: '#' },
   ]
   const stats = [
     { name: 'Offices worldwide', value: '12' },
-    { name: 'Full-time colleagues', value: '300+' },
-    { name: 'Hours per week', value: '40' },
-    { name: 'Paid time off', value: 'Unlimited' },
+    { name: 'Colaboradores a tiempo completo', value: '300+' },
+    { name: 'Horas por semana', value: '40' },
+    { name: 'Tiempo libre pagado', value: 'Ilimitado' },
   ]
   
   export default function Workwithus() {
@@ -45,7 +45,7 @@ const links = [
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Work with us</h2>
+            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Trabaja con nosotros</h2>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
               fugiat veniam occaecat fugiat.

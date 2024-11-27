@@ -46,12 +46,12 @@ export default function Pricing() {
     <div id="pricing" className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Pricing</h2>
+          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Precios</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Plans for teams of all sizes
+            Planes para equipos de todas las tamaños
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Choose the perfect plan for your inspection needs
+            Elige el plan perfecto para tus necesidades de inspección
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <button className="mt-8 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
-                {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                {tier.name === 'Enterprise' ? 'Contactar a ventas' : 'Comenzar'}
               </button>
             </div>
           ))}

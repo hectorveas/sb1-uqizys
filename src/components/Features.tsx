@@ -4,33 +4,33 @@ import { Camera, CloudLightning, Map, Shield, Smartphone, Wifi } from 'lucide-re
 export default function Features() {
   const features = [
     {
-      name: 'Offline Capability',
-      description: 'Continue working without internet connection. All data syncs automatically when back online.',
+      name: 'Sin conexión a internet',
+      description: 'Continue trabajando sin conexión a internet. Todos los datos se sincronizan automáticamente cuando estés nuevamente en línea.',
       icon: Wifi
     },
     {
-      name: 'Photo Documentation',
-      description: 'Capture high-quality photos with built-in annotation tools and automatic GPS tagging.',
+      name: 'Documentación de fotos',
+      description: 'Captura de fotos de alta calidad con herramientas de anotación integradas y etiquetado GPS automático.',
       icon: Camera
     },
     {
-      name: 'Real-time Sync',
-      description: 'Instantly sync inspection data with your team and backend systems.',
+      name: 'Sincronización en tiempo real',
+      description: 'Sincronización instantánea de datos de inspección con tu equipo y sistemas backend.',
       icon: CloudLightning
     },
     {
-      name: 'Location Tracking',
-      description: 'Built-in GPS tracking for accurate location documentation of inspections.',
+      name: 'Tracking de ubicación',
+      description: 'Rastreo GPS integrado para documentación precisa de ubicaciones de inspecciones.',
       icon: Map
     },
     {
-      name: 'Mobile First',
-      description: 'Optimized for field work with an intuitive mobile interface.',
+      name: 'Interfaz móvil',
+      description: 'Optimizado para el trabajo en campo con una interfaz móvil intuitiva.',
       icon: Smartphone
     },
     {
-      name: 'Secure Data',
-      description: 'Enterprise-grade security for sensitive insurance claim information.',
+      name: 'Seguridad de datos',
+      description: 'Seguridad de datos de alta calidad para información sensible de reclamaciones de seguros.',
       icon: Shield
     }
   ];
@@ -41,10 +41,10 @@ export default function Features() {
         <div className="lg:text-center">
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Features</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need for field inspections
+            Todo lo que necesitas para inspecciones en campo
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Powerful tools designed specifically for insurance claim inspectors working in the field.
+            Herramientas poderosas diseñadas específicamente para inspectores de reclamaciones de seguros trabajando en el campo.
           </p>
         </div>
 

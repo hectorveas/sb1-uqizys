@@ -6,12 +6,12 @@ export default function Workflow() {
     <div id="workflow" className="bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Workflow</h2>
+          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Proceso de inspección</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Simple yet powerful inspection process
+            Simple pero poderoso
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Our streamlined workflow helps you complete inspections efficiently and accurately.
+            Nuestro proceso simplificado ayuda a completar inspecciones eficientemente y precisamente.
           </p>
         </div>
 
@@ -25,9 +25,9 @@ export default function Workflow() {
                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-blue-100 rounded-full">
                   <ClipboardCheck className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900">1. Document Damage</h3>
+                <h3 className="mt-6 text-lg font-medium text-gray-900">1. Documentar daños</h3>
                 <p className="mt-2 text-base text-gray-500">
-                  Capture photos, add notes, and document all relevant details about the insurance claim.
+                  Captura fotos, agrega notas y documenta todos los detalles relevantes sobre la reclamación de seguros.
                 </p>
               </div>
 
@@ -35,9 +35,9 @@ export default function Workflow() {
                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-blue-100 rounded-full">
                   <CheckCircle2 className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900">2. Complete Assessment</h3>
+                <h3 className="mt-6 text-lg font-medium text-gray-900">2. Completar evaluación</h3>
                 <p className="mt-2 text-base text-gray-500">
-                  Fill out digital forms and complete the inspection checklist with our guided process.
+                  Completa formularios digitales y completa la lista de verificación de inspección con nuestro proceso guiado.
                 </p>
               </div>
 
@@ -45,9 +45,9 @@ export default function Workflow() {
                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-blue-100 rounded-full">
                   <Upload className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900">3. Submit Report</h3>
+                <h3 className="mt-6 text-lg font-medium text-gray-900">3. Cargar informe</h3>
                 <p className="mt-2 text-base text-gray-500">
-                  Instantly upload your report to the cloud and share with all stakeholders.
+                  Carga instantáneamente tu informe a la nube y comparte con todos los interesados.
                 </p>
               </div>
             </div>
