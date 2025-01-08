@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -9,7 +9,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
-            <img src="./src/assets/images/tbr_logo_header.svg" alt="T.B.R Liquidadores de seguros" className="h-12 w-12 md:h-20 md:w-20" />
+            <a href="#" className="cursor-pointer">
+              <img src="./src/assets/images/tbr_logo_header.svg" alt="T.B.R Liquidadores de seguros" className="h-12 w-12 md:h-20 md:w-20" />
+            </a>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
