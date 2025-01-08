@@ -51,7 +51,7 @@ export default function Services() {
         <div className="relative">
           <button 
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#001529]/90 text-white p-2 rounded-full shadow-lg hover:bg-[#001529] transition-all"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -85,7 +85,7 @@ export default function Services() {
 
           <button 
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#001529]/90 text-white p-2 rounded-full shadow-lg hover:bg-[#001529] transition-all"
           >
             <ChevronRight className="h-6 w-6" />
           </button>

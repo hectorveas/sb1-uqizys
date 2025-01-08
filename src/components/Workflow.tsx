@@ -46,7 +46,7 @@ export default function Workflow() {
           {steps.map((step, index) => (
             <div key={index} className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer">
               {/* Número del paso */}
-              <div className="absolute top-4 left-4 bg-blue-400/80 backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold z-20 shadow-lg">
+              <div className="absolute top-4 left-4 bg-[#001529]/80 backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold z-20 shadow-lg">
                 {index + 1}
               </div>
               
