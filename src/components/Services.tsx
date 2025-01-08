@@ -1,3 +1,4 @@
+import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Services() {
@@ -28,14 +29,22 @@ export default function Services() {
     }
   ];
 
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
   const scrollLeft = () => {
     const slider = document.getElementById('slider');
-    if (slider) slider.scrollLeft = slider.scrollLeft - 450;
+    if (slider) {
+      slider.scrollLeft = slider.scrollLeft - 450;
+      setCurrentSlide(Math.max(currentSlide - 1, 0));
+    }
   };
 
   const scrollRight = () => {
     const slider = document.getElementById('slider');
-    if (slider) slider.scrollLeft = slider.scrollLeft + 450;
+    if (slider) {
+      slider.scrollLeft = slider.scrollLeft + 450;
+      setCurrentSlide(Math.min(currentSlide + 1, Math.ceil(services.length / 3) - 1));
+    }
   };
 
   return (
@@ -89,6 +98,26 @@ export default function Services() {
           >
             <ChevronRight className="h-6 w-6" />
           </button>
+
+          {/* Indicadores de paginación */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {Array.from({ length: Math.ceil(services.length / 3) }).map((_, index) => (
+              <button
+                key={index}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'bg-[#001529] w-8' : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                onClick={() => {
+                  const slider = document.getElementById('slider');
+                  if (slider) {
+                    slider.scrollLeft = index * 450 * 3;
+                    setCurrentSlide(index);
+                  }
+                }}
+                aria-label={`Ir a página ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
