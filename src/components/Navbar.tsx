@@ -13,15 +13,17 @@ export default function Navbar() {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-blue-600"> Servicios </a>
-            <a href="#workflow" className="text-gray-600 hover:text-blue-600">Nosotros</a>
-            <a href="#pricing" className="text-gray-600 hover:text-blue-600">Contacto</a>
+            <a href="#services" className="text-gray-600 hover:text-blue-600">Servicios</a>
+            <a href="#liquidacion" className="text-gray-600 hover:text-blue-600">Tu Liquidación Paso a Paso</a>
+            <a href="#estado" className="text-gray-600 hover:text-blue-600">Revisa el Estado del Siniestro</a>
+            <a href="#equipo" className="text-gray-600 hover:text-blue-600">Equipo</a>
+            <a href="#faq" className="text-gray-600 hover:text-blue-600">Preguntas Frecuentes</a>
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
               onClick={() => {
                 window.location.href = 'https://web.tbrchile.cl/admin/auth/user-login';
               }}
             >
-              Iniciar Sesión
+              Colaboradores
             </button>
           </div>
 
@@ -36,15 +38,17 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <a href="#features" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Servicios</a>
-            <a href="#workflow" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Nosotros</a>
-            <a href="#pricing" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Contacto</a>
+            <a href="#services" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Servicios</a>
+            <a href="#liquidacion" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Tu Liquidación Paso a Paso</a>
+            <a href="#estado" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Revisa el Estado del Siniestro</a>
+            <a href="#equipo" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Equipo</a>
+            <a href="#faq" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Preguntas Frecuentes</a>
             <button className="w-full text-left px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
               onClick={() => {
                 window.location.href = 'https://web.tbrchile.cl/admin/auth/user-login';
               }}
             >
-              Iniciar Sesión
+              Colaboradores
             </button>
           </div>
         </div>
