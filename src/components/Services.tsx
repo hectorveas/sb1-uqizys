@@ -31,12 +31,12 @@ export default function Services() {
 
   const scrollLeft = () => {
     const slider = document.getElementById('slider');
-    if (slider) slider.scrollLeft = slider.scrollLeft - 400;
+    if (slider) slider.scrollLeft = slider.scrollLeft - 450;
   };
 
   const scrollRight = () => {
     const slider = document.getElementById('slider');
-    if (slider) slider.scrollLeft = slider.scrollLeft + 400;
+    if (slider) slider.scrollLeft = slider.scrollLeft + 450;
   };
 
   return (
@@ -59,18 +59,18 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="flex-none w-[350px] group cursor-pointer"
+                className="flex-none w-[450px] group cursor-pointer"
               >
                 <div className="relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl h-full">
-                  <div className="aspect-[4/3] w-full overflow-hidden">
+                  <div className="aspect-[16/10] w-full overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
                       className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-6">
-                    <p className="text-lg font-medium text-gray-900 line-clamp-3">
+                  <div className="p-8">
+                    <p className="text-xl font-medium text-gray-900 line-clamp-3">
                       {service.title}
                     </p>
                   </div>
