@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Workflow() {
   const steps = [
     {
@@ -43,22 +41,28 @@ export default function Workflow() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center group">
-              <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-2xl shadow-lg">
-                <div className="absolute top-4 left-4 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold z-10">
-                  {index + 1}
-                </div>
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
-                />
+            <div key={index} className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+              {/* Número del paso */}
+              <div className="absolute top-4 left-4 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold z-20">
+                {index + 1}
               </div>
-              <div className="text-center px-4">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+              
+              {/* Imagen */}
+              <img
+                src={step.image}
+                alt={step.title}
+                className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
+              />
+              
+              {/* Overlay oscuro por defecto */}
+              <div className="absolute inset-0 bg-black/50 transition-opacity duration-500 group-hover:opacity-80" />
+              
+              {/* Contenido de texto */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-end transform transition-transform duration-500">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed max-w-sm mx-auto">
+                <p className="text-gray-200 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   {step.description}
                 </p>
               </div>
