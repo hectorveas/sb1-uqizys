@@ -14,7 +14,7 @@ export default function Navbar() {
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-gray-600 hover:text-blue-600">Servicios</a>
-            <a href="#liquidacion" className="text-gray-600 hover:text-blue-600">Tu Liquidación Paso a Paso</a>
+            <a href="#Workflow" className="text-gray-600 hover:text-blue-600">Tu Liquidación Paso a Paso</a>
             <a href="#estado" className="text-gray-600 hover:text-blue-600">Revisa el Estado del Siniestro</a>
             <a href="#equipo" className="text-gray-600 hover:text-blue-600">Equipo</a>
             <a href="#faq" className="text-gray-600 hover:text-blue-600">Preguntas Frecuentes</a>
@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
             <a href="#services" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Servicios</a>
-            <a href="#liquidacion" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Tu Liquidación Paso a Paso</a>
+            <a href="#workflow" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Tu Liquidación Paso a Paso</a>
             <a href="#estado" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Revisa el Estado del Siniestro</a>
             <a href="#equipo" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Equipo</a>
             <a href="#faq" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Preguntas Frecuentes</a>

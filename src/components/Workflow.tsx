@@ -3,7 +3,7 @@ import { CheckCircle2, ClipboardCheck, Upload } from 'lucide-react';
 
 export default function Workflow() {
   return (
-    <div id="workflow" className="bg-gray-50 py-24">
+    <div id="Workflow" className="bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Proceso de inspección</h2>
