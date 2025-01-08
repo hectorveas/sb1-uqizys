@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Workflow() {
   const steps = [
     {
@@ -43,12 +41,12 @@ export default function Workflow() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="flex flex-col items-center group">
               <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-2xl">
                 <img
                   src={step.image}
                   alt={step.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
