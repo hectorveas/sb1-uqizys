@@ -59,10 +59,10 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="flex-none w-[400px] group cursor-pointer"
+                className="flex-none w-[350px] group cursor-pointer"
               >
-                <div className="relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl">
-                  <div className="h-[300px] w-full overflow-hidden">
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl h-full">
+                  <div className="aspect-[4/3] w-full overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -70,7 +70,7 @@ export default function Services() {
                     />
                   </div>
                   <div className="p-6">
-                    <p className="text-lg font-medium text-gray-900">
+                    <p className="text-lg font-medium text-gray-900 line-clamp-3">
                       {service.title}
                     </p>
                   </div>
