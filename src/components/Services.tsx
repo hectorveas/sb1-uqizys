@@ -5,23 +5,27 @@ export default function Services() {
   const services = [
     {
       title: 'Liquidación de siniestros 100% digital en nuestra plataforma NexusNet y con acceso disponible 24/7.',
-      image: '/src/assets/images/service1.jpg'
+      image: '/src/assets/images/shop1.jpg'
     },
     {
       title: 'Seguros Individuales y Colectivos de Incendio y Adicionales Hogar.',
-      image: '/src/assets/images/service2.jpg'
+      image: '/src/assets/images/shop1.jpg'
     },
     {
       title: 'Siniestros en PYME de Robo, Perjuicio por Paralización, Incendio y Adicionales.',
-      image: '/src/assets/images/service3.jpg'
+      image: '/src/assets/images/shop1.jpg'
     },
     {
       title: 'Liquidación de Siniestros Catastróficos con Planificación Especializada.',
-      image: '/src/assets/images/service4.jpg'
+      image: '/src/assets/images/shop1.jpg'
     },
     {
       title: 'Siniestros de Avería de Maquinaria y Todo Riesgo Construcción y Montaje.',
-      image: '/src/assets/images/service5.jpg'
+      image: '/src/assets/images/shop1.jpg'
+    },
+    {
+      title: 'Grandes industrias: Hidrocarburos, Minería, Energética, entre otras.',
+      image: '/src/assets/images/shop1.jpg'
     }
   ];
 
