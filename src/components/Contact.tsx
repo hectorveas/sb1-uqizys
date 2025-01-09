@@ -7,6 +7,11 @@ export default function Contact() {
     window.open('https://wa.me/56972158277', '_blank', 'noopener,noreferrer');
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Aquí puedes agregar la lógica para enviar el formulario a consultas@tbrchile.cl
+  };
+
   return (
     <div id="contact" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,49 +65,87 @@ export default function Contact() {
         {/* Formulario desplegable */}
         <div className={`transition-all duration-300 ease-in-out overflow-hidden ${showForm ? 'max-h-[2000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Formulario de contacto</h3>
-            <form className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div>
-                <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">Nombre</label>
-                <input
-                  type="text"
-                  id="first-name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#001529] focus:ring-[#001529] sm:text-sm"
-                />
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8">Enviar una solicitud</h2>
+              <div className="text-right mb-4">
               </div>
-              <div>
-                <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">Apellido</label>
-                <input
-                  type="text"
-                  id="last-name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#001529] focus:ring-[#001529] sm:text-sm"
-                />
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#001529] focus:ring-[#001529] sm:text-sm"
-                />
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Mensaje</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#001529] focus:ring-[#001529] sm:text-sm"
-                ></textarea>
-              </div>
-              <div className="sm:col-span-2">
-                <button
-                  type="submit"
-                  className="w-full bg-[#001529] text-white px-6 py-3 rounded-lg hover:bg-[#001529]/90 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
-                >
-                  Enviar mensaje
-                </button>
-              </div>
-            </form>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Correo electrónico<span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="tipo" className="block text-sm font-medium text-gray-700 mb-1">
+                    Tipo de consulta<span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    id="tipo"
+                    required
+                    className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
+                  >
+                    <option value="">Seleccione tipo de consulta</option>
+                    <option value="siniestro">Consulta siniestro</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="otros">Otros</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="asunto" className="block text-sm font-medium text-gray-700 mb-1">
+                    Asunto (opcional)
+                  </label>
+                  <input
+                    type="text"
+                    id="asunto"
+                    className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="descripcion" className="block text-sm font-medium text-gray-700 mb-1">
+                    Descripción<span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="descripcion"
+                    required
+                    rows={4}
+                    className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
+                  ></textarea>
+                  <p className="mt-1 text-sm text-gray-500">
+                    Ingrese los detalles de esta solicitud. Un integrante de nuestro personal de soporte responderá en breve.
+                  </p>
+                </div>
+
+                <div>
+                  <label htmlFor="rut" className="block text-sm font-medium text-gray-700 mb-1">
+                    RUT (xx.xxx.xxx-x)<span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="rut"
+                    required
+                    placeholder="Ingrese rut del asegurado"
+                    className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
+                  />
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    className="w-full bg-[#001529] text-white px-6 py-3 rounded-lg hover:bg-[#001529]/90 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
+                  >
+                    Enviar solicitud
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
