@@ -2,13 +2,31 @@ import React, { useState } from 'react';
 
 export default function Contact() {
   const [showForm, setShowForm] = useState(false);
+  const [phone, setPhone] = useState('');
+  const [phoneError, setPhoneError] = useState('');
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/56972158277', '_blank', 'noopener,noreferrer');
   };
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, ''); // Solo permite números
+    if (value.length <= 9) {
+      setPhone(value);
+      if (value.length === 9) {
+        setPhoneError('');
+      } else {
+        setPhoneError('El número debe tener 9 dígitos');
+      }
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (phone.length !== 9) {
+      setPhoneError('El número debe tener 9 dígitos');
+      return;
+    }
     // Aquí puedes agregar la lógica para enviar el formulario a consultas@tbrchile.cl
   };
 
@@ -80,6 +98,29 @@ export default function Contact() {
                     required
                     className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
                   />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    ¿Dónde te contactamos?<span className="text-red-500">*</span>
+                  </label>
+                  <div className="flex items-center">
+                    <span className="inline-flex items-center px-4 py-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                      +56
+                    </span>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={phone}
+                      onChange={handlePhoneChange}
+                      required
+                      placeholder="9 dígitos"
+                      className="block w-full rounded-none rounded-r-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
+                    />
+                  </div>
+                  {phoneError && (
+                    <p className="mt-1 text-sm text-red-600">{phoneError}</p>
+                  )}
                 </div>
 
                 <div>
