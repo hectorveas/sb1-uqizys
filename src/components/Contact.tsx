@@ -104,8 +104,8 @@ export default function Contact() {
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                     ¿Dónde te contactamos?<span className="text-red-500">*</span>
                   </label>
-                  <div className="flex items-center">
-                    <span className="inline-flex items-center px-4 py-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                  <div className="flex items-stretch">
+                    <span className="inline-flex items-center px-4 border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm rounded-l-md">
                       +56
                     </span>
                     <input
