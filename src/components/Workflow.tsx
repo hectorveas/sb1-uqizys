@@ -1,3 +1,6 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
 export default function Workflow() {
   const steps = [
     {
@@ -32,46 +35,110 @@ export default function Workflow() {
     }
   ];
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, scale: 0.8 },
+    show: { 
+      opacity: 1, 
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  };
+
   return (
     <div id="Workflow" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4">Tu Liquidación Paso a Paso</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Conoce el proceso completo de liquidación de siniestros, diseñado para brindarte transparencia y eficiencia en cada etapa
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {steps.map((step, index) => (
-            <div key={index} className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+            <motion.div 
+              key={index}
+              variants={item}
+              whileHover={{ scale: 1.03 }}
+              className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+            >
               {/* Número del paso */}
-              <div className="absolute top-4 left-4 bg-[#001529]/80 backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold z-20 shadow-lg">
+              <motion.div 
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.5 + index * 0.1, type: "spring", stiffness: 200 }}
+                className="absolute top-4 left-4 bg-[#001529]/80 backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold z-20 shadow-lg"
+              >
                 {index + 1}
-              </div>
+              </motion.div>
               
               {/* Imagen */}
-              <img
+              <motion.img
+                initial={{ scale: 1.2 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.8 }}
                 src={step.image}
                 alt={step.title}
                 className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
               />
               
               {/* Overlay oscuro por defecto */}
-              <div className="absolute inset-0 bg-black/50 transition-opacity duration-500 group-hover:opacity-80" />
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.5 }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0 bg-black/50 transition-opacity duration-500 group-hover:opacity-80" 
+              />
               
               {/* Contenido de texto */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-end transform transition-transform duration-500">
-                <h3 className="text-2xl font-bold text-white mb-3">
+              <motion.div 
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="absolute inset-0 p-6 flex flex-col justify-end transform transition-transform duration-500"
+              >
+                <motion.h3 
+                  whileHover={{ scale: 1.02 }}
+                  className="text-2xl font-bold text-white mb-3"
+                >
                   {step.title}
-                </h3>
-                <p className="text-gray-200 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                </motion.h3>
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  className="text-gray-200 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
+                >
                   {step.description}
-                </p>
-              </div>
-            </div>
+                </motion.p>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
