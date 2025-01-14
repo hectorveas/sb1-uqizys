@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Clock, Wrench, CreditCard, DollarSign, Search } from 'lucide-react';
+import { useState } from 'react';
+import { ChevronDown, Clock, Wrench, DollarSign, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function FAQ() {
