@@ -38,7 +38,7 @@ export default function Contact() {
           <div className="flex-1 flex items-center gap-6">
             <div className="w-32 h-32 flex-shrink-0">
               <img
-                src="/src/assets/images/contact_illustration.svg"
+                src="/src/assets/images/img_denunciar_siniestro.jpg"
                 alt="Ilustración de contacto"
                 className="w-full h-full object-contain"
               />
