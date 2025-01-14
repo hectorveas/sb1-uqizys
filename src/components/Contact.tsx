@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [showForm, setShowForm] = useState(false);
   const [phone, setPhone] = useState('');
   const [phoneError, setPhoneError] = useState('');
+  const [email, setEmail] = useState('');
+  const [tipo, setTipo] = useState('');
+  const [asunto, setAsunto] = useState('');
+  const [descripcion, setDescripcion] = useState('');
+  const [rut, setRut] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/56972158277', '_blank', 'noopener,noreferrer');
@@ -21,13 +28,46 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (phone.length !== 9) {
       setPhoneError('El número debe tener 9 dígitos');
       return;
     }
-    // Aquí puedes agregar la lógica para enviar el formulario a consultas@tbrchile.cl
+
+    setLoading(true);
+    try {
+      const templateParams = {
+        email: email,
+        phone: phone,
+        rut: rut,
+        tipo: tipo,
+        asunto: asunto,
+        descripcion: descripcion
+      };
+
+      await emailjs.send(
+        "service_bryddv1",
+        "template_y2jpv4e",
+        templateParams,
+        "UPBUcvJooOYpe0bJE"
+      );
+
+      // Limpiar el formulario
+      setEmail('');
+      setPhone('');
+      setTipo('');
+      setAsunto('');
+      setDescripcion('');
+      setRut('');
+      
+      alert('¡Mensaje enviado con éxito!');
+    } catch (error) {
+      console.error('Error al enviar el mensaje:', error);
+      alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -95,6 +135,8 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                     className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
                   />
@@ -129,6 +171,8 @@ export default function Contact() {
                   </label>
                   <select
                     id="tipo"
+                    value={tipo}
+                    onChange={(e) => setTipo(e.target.value)}
                     required
                     className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
                   >
@@ -146,6 +190,8 @@ export default function Contact() {
                   <input
                     type="text"
                     id="asunto"
+                    value={asunto}
+                    onChange={(e) => setAsunto(e.target.value)}
                     className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
                   />
                 </div>
@@ -156,6 +202,8 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="descripcion"
+                    value={descripcion}
+                    onChange={(e) => setDescripcion(e.target.value)}
                     required
                     rows={4}
                     className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
@@ -172,6 +220,8 @@ export default function Contact() {
                   <input
                     type="text"
                     id="rut"
+                    value={rut}
+                    onChange={(e) => setRut(e.target.value)}
                     required
                     placeholder="Ingrese rut del asegurado"
                     className="block w-full rounded-md border border-gray-300 px-4 py-3 focus:border-[#001529] focus:ring-[#001529]"
@@ -180,9 +230,10 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-[#001529] text-white px-6 py-3 rounded-lg hover:bg-[#001529]/90 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
+                    disabled={loading}
+                    className="w-full bg-[#001529] text-white px-6 py-3 rounded-lg hover:bg-[#001529]/90 transition-all duration-200 font-medium shadow-md hover:shadow-lg disabled:opacity-50"
                   >
-                    Enviar solicitud
+                    {loading ? 'Enviando...' : 'Enviar solicitud'}
                   </button>
                 </div>
               </form>
