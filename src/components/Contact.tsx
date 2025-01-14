@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -11,6 +11,24 @@ export default function Contact() {
   const [descripcion, setDescripcion] = useState('');
   const [rut, setRut] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  // Validar el formulario cuando cambien los campos requeridos
+  useEffect(() => {
+    const validateForm = () => {
+      const isValid = 
+        email.trim() !== '' &&
+        phone.length === 9 &&
+        tipo !== '' &&
+        descripcion.trim() !== '' &&
+        rut.trim() !== '' &&
+        !phoneError;
+      
+      setIsFormValid(isValid);
+    };
+
+    validateForm();
+  }, [email, phone, tipo, descripcion, rut, phoneError]);
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/56972158277', '_blank', 'noopener,noreferrer');
@@ -230,11 +248,16 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    disabled={loading}
-                    className="w-full bg-[#001529] text-white px-6 py-3 rounded-lg hover:bg-[#001529]/90 transition-all duration-200 font-medium shadow-md hover:shadow-lg disabled:opacity-50"
+                    disabled={loading || !isFormValid}
+                    className="w-full bg-[#001529] text-white px-6 py-3 rounded-lg hover:bg-[#001529]/90 transition-all duration-200 font-medium shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? 'Enviando...' : 'Enviar solicitud'}
                   </button>
+                  {!isFormValid && !loading && (
+                    <p className="mt-2 text-sm text-red-600 text-center">
+                      Por favor, complete todos los campos requeridos correctamente
+                    </p>
+                  )}
                 </div>
               </form>
             </div>
