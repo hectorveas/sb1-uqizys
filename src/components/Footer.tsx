@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="ml-2 text-xl font-bold text-white">T.B.R Liquidadores de seguros</span>
             </div>
             <p className="mt-4 text-gray-400">
-              Haciendo que la inspección de reclamaciones de seguros sea simple y eficiente.
+              Nuestros procesos son simples y digitales, disponibles para ti en cualquier momento y lugar.
             </p>
           </div>
           
@@ -35,8 +35,7 @@ export default function Footer() {
               <li><a href="https://www.cmfchile.cl" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">CMF</a></li>
               <li><a href="https://www.sii.cl" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">SII</a></li>
               <li><a href="https://www.bcentral.cl" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Banco Central de Chile</a></li>
-              <li><a href="https://www.bcentral.cl/web/banco-central/areas/estadisticas/tipos-de-cambio-y-paridades" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Valor del Dólar y UF</a></li>
-            </ul>
+\            </ul>
           </div>
 
           <div>
