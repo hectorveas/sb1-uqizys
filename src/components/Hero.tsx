@@ -27,7 +27,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-4 text-xl md:text-2xl text-white font-light max-w-3xl mx-auto"
+          className="mt-4 text-xl md:text-2xl text-white font-light max-w-none md:max-w-full mx-auto whitespace-nowrap"
         >
           Nuestros procesos son simples y digitales, disponibles para ti en cualquier momento y lugar.
         </motion.p>
