@@ -4,7 +4,7 @@ import Services from './components/Services';
 import Workflow from './components/Workflow';
 import Team from './components/Team';
 import Footer from './components/Footer';
-import Workwithus from './components/Workwithus';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Services />
         <Workflow />
         <Team />
-        <Workwithus />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
