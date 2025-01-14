@@ -2,7 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Workflow from './components/Workflow';
-import Pricing from './components/Pricing';
+import Team from './components/Team';
 import Footer from './components/Footer';
 import Workwithus from './components/Workwithus';
 import Contact from './components/Contact';
@@ -15,8 +15,8 @@ function App() {
         <Hero />
         <Services />
         <Workflow />
+        <Team />
         <Workwithus />
-        <Pricing />
         <Contact />
       </main>
       <Footer />
