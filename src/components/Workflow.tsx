@@ -60,7 +60,7 @@ export default function Workflow() {
   return (
     <div id="Workflow" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+      <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -122,19 +122,21 @@ export default function Workflow() {
                 transition={{ delay: 0.3 }}
                 className="absolute inset-0 p-6 flex flex-col justify-end transform transition-transform duration-500"
               >
-                <motion.h3 
-                  whileHover={{ scale: 1.02 }}
-                  className="text-2xl font-bold text-white mb-3"
-                >
-                  {step.title}
-                </motion.h3>
-                <motion.p 
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  className="text-gray-200 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
-                >
-                  {step.description}
-                </motion.p>
+                <motion.div className="flex flex-col items-center">
+                  <motion.h3 
+                    whileHover={{ scale: 1.02 }}
+                    className="text-2xl font-bold text-white mb-3 text-center w-full"
+                  >
+                    {step.title}
+                  </motion.h3>
+                  <motion.p 
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className="text-gray-200 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 text-justify w-full"
+                  >
+                    {step.description}
+                  </motion.p>
+                </motion.div>
               </motion.div>
             </motion.div>
           ))}
