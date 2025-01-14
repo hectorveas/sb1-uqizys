@@ -1,4 +1,4 @@
-import { Shield, Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -7,7 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="col-span-1">
             <div className="flex items-center">
-              <Shield className="h-8 w-8 text-blue-500" />
+              <img 
+                src="./src/assets/images/tbr_logo_header.svg" 
+                alt="T.B.R Liquidadores de seguros" 
+                className="h-12 w-12"
+              />
               <span className="ml-2 text-xl font-bold text-white">T.B.R Liquidadores de seguros</span>
             </div>
             <p className="mt-4 text-gray-400">
@@ -36,15 +40,6 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Empresa</h3>
-            <ul className="mt-4 space-y-4">
-              <li><a href="#" className="text-gray-300 hover:text-white">Acerca de</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Carreras</a></li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contacto</h3>
             <ul className="mt-4 space-y-4">
               <li className="flex items-center text-gray-300">
@@ -57,6 +52,17 @@ export default function Footer() {
               </li>
               <li><a href="#contact" className="text-gray-300 hover:text-white">Formulario de Contacto</a></li>
             </ul>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <a 
+              href="https://www.linkedin.com/company/t-b-r-asociados-liquidadores-de-seguros/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors duration-200"
+            >
+              <Linkedin className="h-8 w-8" />
+            </a>
           </div>
         </div>
         
