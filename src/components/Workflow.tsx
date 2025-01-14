@@ -60,15 +60,15 @@ export default function Workflow() {
   return (
     <div id="Workflow" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <motion.div 
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Tu Liquidación Paso a Paso</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-center">Tu Liquidación Paso a Paso</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
             Conoce el proceso completo de liquidación de siniestros, diseñado para brindarte transparencia y eficiencia en cada etapa
           </p>
         </motion.div>
@@ -120,23 +120,21 @@ export default function Workflow() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="absolute inset-0 p-6 flex flex-col justify-end transform transition-transform duration-500"
+                className="absolute inset-0 flex flex-col items-center justify-center p-6"
               >
-                <motion.div className="flex flex-col items-center">
-                  <motion.h3 
-                    whileHover={{ scale: 1.02 }}
-                    className="text-2xl font-bold text-white mb-3 text-center w-full"
-                  >
-                    {step.title}
-                  </motion.h3>
-                  <motion.p 
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    className="text-gray-200 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 text-justify w-full"
-                  >
-                    {step.description}
-                  </motion.p>
-                </motion.div>
+                <motion.h3 
+                  whileHover={{ scale: 1.02 }}
+                  className="text-2xl font-bold text-white mb-3 text-center w-full px-4"
+                >
+                  {step.title}
+                </motion.h3>
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  className="text-gray-200 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 text-justify w-full"
+                >
+                  {step.description}
+                </motion.p>
               </motion.div>
             </motion.div>
           ))}
