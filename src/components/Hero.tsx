@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center" style={{
-      backgroundImage: 'url("/src/assets/images/foto_header.webp")',
+      backgroundImage: 'url("/src/assets/images/foto_hero.webp")',
     }}>
       {/* Overlay para mejorar la legibilidad del texto */}
       <motion.div 
