@@ -5,32 +5,32 @@ export default function Workflow() {
     {
       title: 'Denuncia de Siniestro',
       description: 'El asegurado procede a denunciar el siniestro ante la compañía de seguros o el corredor.',
-      image: '/src/assets/images/img_denunciar_siniestro.jpg'
+      image: '/src/assets/images/workflow/1.webp'
     },
     {
       title: 'Vista de Inspección',
       description: 'Nuestro equipo contacta al asegurado o su designado para verificar datos y coordinar la visita.',
-      image: '/src/assets/images/img_denunciar_siniestro.jpg'
+      image: '/src/assets/images/workflow/2.webp'
     },
     {
       title: 'Solicitud de Antecedentes y Análisis de Cobertura',
       description: 'Se solicitan antecedentes según el tipo de siniestro y se lleva a cabo un análisis técnico detallado, incluyendo la póliza y las circunstancias del evento.',
-      image: '/src/assets/images/img_denunciar_siniestro.jpg'
+      image: '/src/assets/images/workflow/3.webp'
     },
     {
       title: 'Análisis Económico',
       description: 'Se analiza la pérdida material del asegurado, realizada por el ajustador o basada en el presupuesto proporcionado por el asegurado.',
-      image: '/src/assets/images/img_denunciar_siniestro.jpg'
+      image: '/src/assets/images/workflow/4.webp'
     },
     {
       title: 'Comunicación de resolución del siniestro',
       description: 'Se envía la conclusión del siniestro con la determinación final del liquidador.',
-      image: '/src/assets/images/img_denunciar_siniestro.jpg'
+      image: '/src/assets/images/workflow/5.webp'
     },
     {
       title: 'Envió de Informe de Liquidación',
       description: 'Se hace envió del informe de liquidación a las partes involucradas (asegurado y asegurador).',
-      image: '/src/assets/images/img_denunciar_siniestro.jpg'
+      image: '/src/assets/images/workflow/6.webp'
     }
   ];
 
