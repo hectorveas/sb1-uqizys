@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import contact from '../assets/images/img_denunciar_siniestro.jpg';
+import contact from '../assets/images/support.svg';
+
 export default function Contact() {
   const [showForm, setShowForm] = useState(false);
   const [phone, setPhone] = useState('');
