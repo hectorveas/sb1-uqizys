@@ -1,32 +1,38 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import service1 from '../assets/images/services/1.webp';
+import service2 from '../assets/images/services/2.webp';
+import service3 from '../assets/images/services/3.webp';
+import service4 from '../assets/images/services/4.webp';
+import service5 from '../assets/images/services/5.webp';
+import service6 from '../assets/images/services/6.webp';
 
 export default function Services() {
   const services = [
     {
       title: 'Liquidación de siniestros 100% digital en nuestra plataforma NexusNet y con acceso disponible 24/7.',
-      image: '/src/assets/images/services/1.webp'
+      image: service1
     },
     {
       title: 'Seguros Individuales y Colectivos de Incendio y Adicionales Hogar.',
-      image: '/src/assets/images/services/2.webp'
+      image: service2
     },
     {
       title: 'Siniestros en PYME de Robo, Perjuicio por Paralización, Incendio y Adicionales.',
-      image: '/src/assets/images/services/3.webp'
+      image: service3
     },
     {
       title: 'Liquidación de Siniestros Catastróficos con Planificación Especializada.',
-      image: '/src/assets/images/services/4.webp'
+      image: service4
     },
     {
       title: 'Siniestros de Avería de Maquinaria y Todo Riesgo Construcción y Montaje.',
-      image: '/src/assets/images/services/5.webp'
+      image: service5
     },
     {
       title: 'Grandes industrias: Hidrocarburos, Minería, Energética, entre otras.',
-      image: '/src/assets/images/services/6.webp'
+      image: service6
     }
   ];
 

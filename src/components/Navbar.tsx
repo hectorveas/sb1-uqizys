@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/images/tbr_logo_header.svg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#" className="cursor-pointer transition-transform hover:scale-105">
-              <img src="./src/assets/images/tbr_logo_header.svg" alt="T.B.R Liquidadores de seguros" className="h-12 w-12 md:h-16 md:w-16" />
+              <img src={logo} alt="T.B.R Liquidadores de seguros" className="h-12 w-12 md:h-16 md:w-16" />
             </a>
           </div>
           

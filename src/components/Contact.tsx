@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-
+import contact from '../assets/images/img_denunciar_siniestro.jpg';
 export default function Contact() {
   const [showForm, setShowForm] = useState(false);
   const [phone, setPhone] = useState('');
@@ -96,7 +96,7 @@ export default function Contact() {
           <div className="flex-1 flex items-center gap-6">
             <div className="w-32 h-32 flex-shrink-0">
               <img
-                src="/src/assets/images/img_denunciar_siniestro.jpg"
+                src={contact}
                 alt="Ilustración de contacto"
                 className="w-full h-full object-contain"
               />

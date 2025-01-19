@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import team1 from '../assets/images/img_denunciar_siniestro.jpg';
 
 export default function Team() {
   return (
@@ -30,7 +31,7 @@ export default function Team() {
             <motion.img 
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              src="/src/assets/images/img_denunciar_siniestro.jpg" 
+              src={team1} 
               alt="Equipo de profesionales" 
               className="w-full max-w-2xl mx-auto rounded-lg shadow-xl"
             />

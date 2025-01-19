@@ -1,4 +1,5 @@
 import { Phone, MapPin, Linkedin } from 'lucide-react';
+import logo from '../assets/images/tbr_logo_header.svg';
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1">
             <div className="flex items-center">
               <img 
-                src="./src/assets/images/tbr_logo_header.svg" 
+                src={logo} 
                 alt="T.B.R Liquidadores de seguros" 
                 className="h-12 w-12"
               />

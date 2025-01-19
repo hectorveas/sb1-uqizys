@@ -1,36 +1,42 @@
 import { motion } from 'framer-motion';
+import workflow1 from '../assets/images/workflow/1.webp';
+import workflow2 from '../assets/images/workflow/2.webp';
+import workflow3 from '../assets/images/workflow/3.webp';
+import workflow4 from '../assets/images/workflow/4.webp';
+import workflow5 from '../assets/images/workflow/5.webp';
+import workflow6 from '../assets/images/workflow/6.webp';
 
 export default function Workflow() {
   const steps = [
     {
       title: 'Denuncia de Siniestro',
       description: 'El asegurado procede a denunciar el siniestro ante la compañía de seguros o el corredor.',
-      image: '/src/assets/images/workflow/1.webp'
+      image: workflow1
     },
     {
       title: 'Vista de Inspección',
       description: 'Nuestro equipo contacta al asegurado o su designado para verificar datos y coordinar la visita.',
-      image: '/src/assets/images/workflow/2.webp'
+      image: workflow2
     },
     {
       title: 'Solicitud de Antecedentes y Análisis de Cobertura',
       description: 'Se solicitan antecedentes según el tipo de siniestro y se lleva a cabo un análisis técnico detallado, incluyendo la póliza y las circunstancias del evento.',
-      image: '/src/assets/images/workflow/3.webp'
+      image: workflow3
     },
     {
       title: 'Análisis Económico',
       description: 'Se analiza la pérdida material del asegurado, realizada por el ajustador o basada en el presupuesto proporcionado por el asegurado.',
-      image: '/src/assets/images/workflow/4.webp'
+      image: workflow4
     },
     {
       title: 'Comunicación de resolución del siniestro',
       description: 'Se envía la conclusión del siniestro con la determinación final del liquidador.',
-      image: '/src/assets/images/workflow/5.webp'
+      image: workflow5
     },
     {
       title: 'Envió de Informe de Liquidación',
       description: 'Se hace envió del informe de liquidación a las partes involucradas (asegurado y asegurador).',
-      image: '/src/assets/images/workflow/6.webp'
+      image: workflow6
     }
   ];
 
