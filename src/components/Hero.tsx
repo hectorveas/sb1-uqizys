@@ -14,25 +14,25 @@ export default function Hero() {
         className="absolute inset-0 bg-black"
       />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 text-center text-white px-4">
         <motion.h1 
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl mb-6"
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-6xl font-bold mb-6"
         >
           TBR Liquidadores de Seguros SpA
         </motion.h1>
-        
         <motion.p 
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-4 text-xl md:text-2xl text-white font-light max-w-none md:max-w-full mx-auto whitespace-nowrap"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-xl md:text-2xl max-w-3xl mx-auto"
         >
           Nuestros procesos son simples y digitales, disponibles para ti en cualquier momento y lugar.
         </motion.p>
       </div>
+      
     </div>
   );
 }
