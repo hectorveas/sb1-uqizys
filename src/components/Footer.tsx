@@ -1,7 +1,34 @@
-import { Phone, MapPin, Linkedin } from 'lucide-react';
+import { Phone, MapPin, Linkedin, DollarSign, TrendingUp } from 'lucide-react';
 import logo from '../assets/images/tbr_logo_header.svg';
+import { useState, useEffect } from 'react';
 
 export default function Footer() {
+  const [rates, setRates] = useState({
+    dolar: '0',
+    uf: '0'
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRates = async () => {
+      try {
+        const response = await fetch('https://mindicador.cl/api');
+        const data = await response.json();
+        
+        setRates({
+          dolar: data.dolar.valor.toLocaleString('es-CL'),
+          uf: data.uf.valor.toLocaleString('es-CL')
+        });
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching rates:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchRates();
+  }, []);
+
   return (
     <footer className="bg-gray-900">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -36,7 +63,15 @@ export default function Footer() {
               <li><a href="https://www.cmfchile.cl" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">CMF</a></li>
               <li><a href="https://www.sii.cl" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">SII</a></li>
               <li><a href="https://www.bcentral.cl" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Banco Central de Chile</a></li>
-\            </ul>
+              <li className="flex items-center space-x-2 text-gray-300">
+                <DollarSign className="h-4 w-4 text-gray-300" />
+                <span>Dólar: ${loading ? '...' : rates.dolar}</span>
+              </li>
+              <li className="flex items-center space-x-2 text-gray-300">
+                <TrendingUp className="h-4 w-4 text-gray-300" />
+                <span>UF: ${loading ? '...' : rates.uf}</span>
+              </li>
+            </ul>
           </div>
 
           <div>

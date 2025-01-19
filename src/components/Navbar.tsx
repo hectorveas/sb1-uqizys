@@ -6,6 +6,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleLogin = () => {
+    window.open('https://web.tbrchile.cl/admin/auth/insured-login', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleLoginColaboradores = () => {
     window.open('https://web.tbrchile.cl/admin/auth/user-login', '_blank', 'noopener,noreferrer');
   };
 
@@ -54,7 +58,7 @@ export default function Navbar() {
             </button>
             <button 
               className="bg-[#001529] text-white px-4 py-2 rounded-lg hover:bg-[#001529]/90 transition-all duration-200 text-sm font-medium shadow-md hover:shadow-lg"
-              onClick={handleLogin}
+              onClick={handleLoginColaboradores}
             >
               Colaboradores
             </button>
