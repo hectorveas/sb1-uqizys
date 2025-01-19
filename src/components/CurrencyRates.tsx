@@ -34,7 +34,7 @@ export default function CurrencyRates() {
   }, []);
 
   return (
-    <div className="fixed top-24 right-4 z-40 bg-white/90 backdrop-blur-sm shadow-lg rounded-lg p-4 space-y-3">
+    <div className="fixed top-24 right-4 z-40 bg-white/90 backdrop-blur-sm shadow-lg rounded-lg p-4 space-y-3 hidden md:block">
       <div className="flex items-center space-x-3">
         <div className="bg-green-100 p-2 rounded-full">
           <DollarSign className="h-5 w-5 text-green-600" />
