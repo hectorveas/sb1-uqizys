@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-gray-300">
                 <MapPin className="h-5 w-5 mr-2" />
-                <span>Av. Providencia 1234, Of. 567, Providencia, Santiago</span>
+                <span>Huérfanos 547, Oficina 608, Santiago</span>
               </li>
               <li><a href="#contact" className="text-gray-300 hover:text-white">Formulario de Contacto</a></li>
             </ul>
