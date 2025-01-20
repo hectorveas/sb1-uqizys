@@ -133,15 +133,24 @@ export default function Workflow() {
                 >
                   {step.title}
                 </motion.h3>
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  className="bg-black/80 p-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 w-full"
-                >
-                  <p className="text-gray-200 leading-relaxed text-justify">
-                    {step.description}
-                  </p>
-                </motion.div>
+                <div className="w-full">
+                  <motion.div 
+                    className="bg-black/80 p-4 rounded-lg w-full block md:hidden"
+                  >
+                    <p className="text-gray-200 leading-relaxed text-justify">
+                      {step.description}
+                    </p>
+                  </motion.div>
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className="bg-black/80 p-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 w-full hidden md:block"
+                  >
+                    <p className="text-gray-200 leading-relaxed text-justify">
+                      {step.description}
+                    </p>
+                  </motion.div>
+                </div>
               </motion.div>
             </motion.div>
           ))}
