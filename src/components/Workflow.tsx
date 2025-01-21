@@ -73,7 +73,7 @@ export default function Workflow() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4 text-center">Tu Liquidación Paso a Paso</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto text-center">
             Conoce el proceso completo de liquidación de siniestros, diseñado para brindarte transparencia y eficiencia en cada etapa
           </p>
         </motion.div>
