@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/tbr_logo_header.svg';
+import CurrencyRates from './CurrencyRates';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+    <nav className="fixed w-full bg-white z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
@@ -75,6 +76,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      <CurrencyRates />
 
       {/* Menú móvil */}
       <div 
@@ -106,7 +108,7 @@ export default function Navbar() {
           </button>
           <button 
             className="w-full text-left px-4 py-3 bg-[#001529] text-white rounded-lg hover:bg-[#001529]/90 transition-all duration-200 text-sm font-medium shadow-md"
-            onClick={handleLogin}
+            onClick={handleLoginColaboradores}
           >
             Colaboradores
           </button>

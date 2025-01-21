@@ -1,23 +1,26 @@
 import { useState, useEffect } from 'react';
-import { DollarSign, TrendingUp } from 'lucide-react';
+import { DollarSign, Euro, TrendingUp } from 'lucide-react';
 
 export default function CurrencyRates() {
   const [rates, setRates] = useState({
     dolar: '0',
-    uf: '0'
+    euro: '0',
+    uf: '0',
+    utm: '0'
   });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        // Aquí deberías reemplazar esta URL con la API real que vayas a utilizar
         const response = await fetch('https://mindicador.cl/api');
         const data = await response.json();
         
         setRates({
           dolar: data.dolar.valor.toLocaleString('es-CL'),
-          uf: data.uf.valor.toLocaleString('es-CL')
+          euro: data.euro.valor.toLocaleString('es-CL'),
+          uf: data.uf.valor.toLocaleString('es-CL'),
+          utm: data.utm.valor.toLocaleString('es-CL')
         });
         setLoading(false);
       } catch (error) {
@@ -34,28 +37,25 @@ export default function CurrencyRates() {
   }, []);
 
   return (
-    <div className="fixed top-24 right-4 z-40 bg-white/90 backdrop-blur-sm shadow-lg rounded-lg p-4 space-y-3 hidden md:block">
-      <div className="flex items-center space-x-3">
-        <div className="bg-green-100 p-2 rounded-full">
-          <DollarSign className="h-5 w-5 text-green-600" />
-        </div>
-        <div>
-          <p className="text-sm text-gray-500">Dólar</p>
-          <p className="font-semibold">
-            {loading ? 'Cargando...' : `$${rates.dolar}`}
-          </p>
-        </div>
-      </div>
-
-      <div className="flex items-center space-x-3">
-        <div className="bg-blue-100 p-2 rounded-full">
-          <TrendingUp className="h-5 w-5 text-blue-600" />
-        </div>
-        <div>
-          <p className="text-sm text-gray-500">UF</p>
-          <p className="font-semibold">
-            {loading ? 'Cargando...' : `$${rates.uf}`}
-          </p>
+    <div className="bg-[#001529] text-white py-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-end space-x-6 text-sm">
+          <div className="flex items-center space-x-2">
+            <DollarSign className="h-4 w-4" />
+            <span>USD: ${loading ? '...' : rates.dolar}</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Euro className="h-4 w-4" />
+            <span>EUR: ${loading ? '...' : rates.euro}</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <TrendingUp className="h-4 w-4" />
+            <span>UF: ${loading ? '...' : rates.uf}</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <TrendingUp className="h-4 w-4" />
+            <span>UTM: ${loading ? '...' : rates.utm}</span>
+          </div>
         </div>
       </div>
     </div>
