@@ -37,24 +37,26 @@ export default function CurrencyRates() {
   }, []);
 
   return (
-    <div className="bg-[#001529] text-white py-2">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-end space-x-6 text-sm">
-          <div className="flex items-center space-x-2">
-            <DollarSign className="h-4 w-4" />
-            <span>USD: ${loading ? '...' : rates.dolar}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Euro className="h-4 w-4" />
-            <span>EUR: ${loading ? '...' : rates.euro}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <TrendingUp className="h-4 w-4" />
-            <span>UF: ${loading ? '...' : rates.uf}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <TrendingUp className="h-4 w-4" />
-            <span>UTM: ${loading ? '...' : rates.utm}</span>
+    <div className="bg-[#001529] text-white py-1.5 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="flex items-center justify-start md:justify-end overflow-x-auto no-scrollbar whitespace-nowrap">
+          <div className="flex items-center space-x-4 md:space-x-6 px-2">
+            <div className="flex items-center space-x-1.5">
+              <DollarSign className="h-3.5 w-3.5 md:h-4 md:w-4 text-green-400" />
+              <span className="text-xs md:text-sm">USD: ${loading ? '...' : rates.dolar}</span>
+            </div>
+            <div className="flex items-center space-x-1.5">
+              <Euro className="h-3.5 w-3.5 md:h-4 md:w-4 text-blue-400" />
+              <span className="text-xs md:text-sm">EUR: ${loading ? '...' : rates.euro}</span>
+            </div>
+            <div className="flex items-center space-x-1.5">
+              <TrendingUp className="h-3.5 w-3.5 md:h-4 md:w-4 text-yellow-400" />
+              <span className="text-xs md:text-sm">UF: ${loading ? '...' : rates.uf}</span>
+            </div>
+            <div className="flex items-center space-x-1.5">
+              <TrendingUp className="h-3.5 w-3.5 md:h-4 md:w-4 text-purple-400" />
+              <span className="text-xs md:text-sm">UTM: ${loading ? '...' : rates.utm}</span>
+            </div>
           </div>
         </div>
       </div>
