@@ -261,7 +261,7 @@ export default function Contact() {
                   )}
                   <div className="mt-4 p-4 bg-[#eff6ff] border border-blue-200 rounded-md">
                     <p className="text-sm text-gray-700 text-justify">
-                      Por favor absténgase de revelar datos personales sensibles en la sección de comentarios de este formulario, tales como datos de salud, preferencias sexuales o creencias religiosas, tarjetas de crédito, información financiera o cualquier otro dato que la Ley considere sensible o que pueda afectar su intimidad personal.
+                      Le solicitamos amablemente abstenerse de incluir información personal sensible en este formulario, como datos médicos, orientación sexual, creencias religiosas, números de tarjetas de crédito, información financiera o cualquier otro dato que la legislación vigente considere sensible o que pueda comprometer su privacidad personal.
                     </p>
                   </div>
                 </div>
